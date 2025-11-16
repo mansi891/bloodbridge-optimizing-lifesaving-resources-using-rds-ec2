@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloodBridge Frontend Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>BloodBridge: Lifesaving Resources</h1>
+    </header>
+
+    <nav>
+        <a href="#" id="navEmergency">Emergency Request</a>
+        <a href="#" id="navDonor">Donor Management</a>
+        <a href="#" id="navInventory">Blood Bank Inventory</a>
+    </nav>
+
+    <section id="emergency" class="active">
+        <h2>Emergency Blood Request</h2>
+        <form id="emergencyForm">
+            <label for="bloodType">Blood Type:</label>
+            <input type="text" id="bloodType" placeholder="Enter blood group (A+, O-)" pattern="^(A|B|AB|O)[\+\-]$"
+" required>
+
+            <label for="quantity">Quantity (units):</label>
+            <input type="number" id="quantity" min="1" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" required>
+
+            <button type="button" id="submitEmergency">Submit Request</button>
+        </form>
+    </section>
+
+    <section id="donor">
+        <h2>Donor Management</h2>
+        <div class="dashboard">
+            <h3>Upcoming Blood Drives</h3>
+            <ul>
+                <li>Blood Drive at City Hall - 04 June 2025</li>
+                <li>Community Center Drive - 10 June 2025</li>
+            </ul>
+            <button type="button" id="scheduleDonation">Schedule Donation</button>
+        </div>
+    </section>
+
+    <section id="inventory">
+        <h2>Blood Bank Inventory</h2>
+        <form id="inventoryForm">
+            <label for="bloodTypeInventory">Blood Type:</label>
+            <input type="text" id="bloodTypeInventory" required>
+
+            <label for="stockLevel">Stock Level (units):</label>
+            <input type="number" id="stockLevel" required>
+
+            <button type="button" id="updateInventory">Update Inventory</button>
+        </form>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
